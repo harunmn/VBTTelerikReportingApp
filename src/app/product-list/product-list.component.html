@@ -1,0 +1,10 @@
+<p>Ürün Listesi Raporu</p>
+
+<tr-viewer #viewer1
+    [containerStyle]="viewerContainerStyle"
+    [serviceUrl]="'http://localhost:53674/api/reports'"
+    [reportSource]="{ report: 'ProductList.trdp', parameters: { } }"
+    [viewMode]="'PRINT_PREVIEW'"
+    [scaleMode]="'SPECIFIC'"
+    [scale]="1.0">
+</tr-viewer>

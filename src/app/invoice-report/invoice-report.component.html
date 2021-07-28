@@ -1,0 +1,19 @@
+<p>Fatura Raporlama</p>
+
+
+<form [formGroup]="InvoiceForm">
+    <label for="siparisNo" >Sipariş No: </label>
+    <input type="text" id="siparisNo" formControlName="OrderId" >
+
+    <input type="button" value="Fatura" (click)="GetInvoice()">
+</form>
+
+
+<tr-viewer #viewer1
+    [containerStyle]="viewerContainerStyle"
+    [serviceUrl]="'http://localhost:53674/api/reports'"
+    [reportSource]="{ report: 'Invoice.trdp', parameters: { OrderId:InvoiceOrderId} }"
+    [viewMode]="'INTERACTIVE'"
+    [scaleMode]="'SPECIFIC'"
+    [scale]="1.0">
+</tr-viewer>

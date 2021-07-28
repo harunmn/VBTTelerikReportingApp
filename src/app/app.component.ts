@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'VBTTelerikReportingApp';
+
+  viewerContainerStyle = {
+    position: 'relative',
+    width: '1000px',
+    height: '800px',
+    ['font-family']: 'ms sans serif'
+  };
 }
